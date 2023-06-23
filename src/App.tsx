@@ -1,13 +1,12 @@
 import { Grid } from "./Grid/index.tsx";
-import { TodoContextProvider } from "./hooks/useTodo.tsx";
+import { ListTodoProvider } from "./hooks/ListTodoProvider.tsx";
 import { GlobalStyle } from "./styles/global";
 
 export function App() {
-
   return (
-    <TodoContextProvider>
+    <ListTodoProvider >
       <GlobalStyle />
       <Grid />
-    </TodoContextProvider>
+    </ListTodoProvider>
   )
 }

@@ -3,14 +3,11 @@ import styled from "styled-components";
 export const Container = styled.div`
   margin: 5rem auto;
   width: 50rem;
-  height: 40rem;
-  border: 1px solid red;
-  border-radius: 10px;
+  min-height: 40rem;
 `
 export const AddTodo = styled.div`
   display: flex;
   gap: 1rem;
-  border: 1px solid red;
   padding: 2rem 0;
   justify-content: center;
   align-items: center;
@@ -18,8 +15,16 @@ export const AddTodo = styled.div`
     width: 25rem;
     height: 2rem;
     padding: 1rem;
+    color: white;
+    font-size: large;
     border: none;
+    border-bottom: 2px solid #969696;
+    background: none;
     border-radius: 2px;
+  }
+  input::placeholder{
+    color: white;
+    font-size: large;
   }
   button{
     border: none;
@@ -31,6 +36,7 @@ export const AddTodo = styled.div`
 
 export const Content = styled.div`
   display: flex;
-  border: 1px solid red;
+  border: 1px solid #969696;
+  border-radius: 5px;
   padding: 2rem 6rem;
 `

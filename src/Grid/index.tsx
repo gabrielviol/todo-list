@@ -1,23 +1,20 @@
 import { Plus } from "@phosphor-icons/react";
 import { AddTodo, Container, Content } from "./style";
 import { useContext, useRef } from "react";
-import { useTodo } from "../hooks/useTodo";
-import { Todo } from "../components/Todo";
+import { ListTodo } from "../components/ListTodo";
+import { ListTodoContext } from "../hooks/ListTodoProvider";
 
 export function Grid() {
-  const { addTodo, tasks } = useContext(useTodo)
   const todoRef = useRef<HTMLInputElement | null>(null)
+  const { addItem } = useContext(ListTodoContext)
 
   function handleAddTodo() {
     if (todoRef.current) {
       const todoValue = todoRef.current.value
-      addTodo({
-        tasks: todoValue
-      });
+      addItem({ task: todoValue, completed: false })
       todoRef.current.value = ''
     }
   }
-  console.log(tasks)
   return (
     <Container>
       <AddTodo>
@@ -27,12 +24,7 @@ export function Grid() {
         </button>
       </AddTodo>
       <Content>
-        {tasks.map(task => {
-          return (
-            <Todo task={task} />
-          )
-        })}
-
+        <ListTodo />
       </Content>
     </Container>
   )
