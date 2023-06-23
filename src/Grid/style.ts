@@ -26,6 +26,9 @@ export const AddTodo = styled.div`
     color: white;
     font-size: large;
   }
+  input:focus{
+    outline: none;
+  }
   button{
     border: none;
     border-radius: 2px;
@@ -33,10 +36,19 @@ export const AddTodo = styled.div`
   }
 
 `
-
 export const Content = styled.div`
   display: flex;
   border: 1px solid #969696;
   border-radius: 5px;
   padding: 2rem 6rem;
+`
+export const Total = styled.div`
+  display: flex;
+  padding: 0 8rem;
+  justify-content: space-between;
+  span{
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+  }
 `

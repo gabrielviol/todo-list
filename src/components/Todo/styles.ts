@@ -16,6 +16,34 @@ export const Item = styled.li`
     gap: 0.5rem;
     color: white;
     font-size: large;
+  }  
+  .completed-task{
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+  div{
+    display: flex;
+    gap: 0.5rem;
+  }
+  input{
+    padding: 0.5rem;
+    color: white;
+    font-size: medium;
+    border: none;
+    border-bottom: 2px solid #969696;
+    background: none;
+    border-radius: 2px;
+  }
+  input::placeholder{
+    color: white;
+    font-size: medium;
+  }
+  input:focus{
+    outline: none;
+  }
+  div{
+    display: flex;
+    gap: 0.5rem;
   }
   button{
     display: flex;
@@ -28,9 +56,8 @@ export const Item = styled.li`
     border-radius: 5px;
     cursor: pointer;
   }
-  div{
-    display: flex;
-    gap: 0.5rem;
+  button:disabled{
+    opacity: 0.5;
+    cursor: default;
   }
-
 `
